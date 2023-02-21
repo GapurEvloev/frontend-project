@@ -12,6 +12,8 @@
     // The compiler will process not only TS files, but also JS files
     "allowJs": true,
     "moduleResolution": "node",
+    // for absolute import paths
+    "baseUrl": ".",
     // esModuleInterop allows you to work with packages that use
     // common js as with regular packages with import (require() module.export) = common js
     // import Moment from 'moment';
@@ -26,7 +28,7 @@
     // import * as React from 'react';
     // you can write the following
     // import React from 'react';
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": true
   },
   "ts-node": {
     "compilerOptions": {
