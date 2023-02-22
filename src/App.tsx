@@ -1,6 +1,6 @@
 import { Suspense, useContext, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
-import classNames from "classnames";
+import { classNames } from "./helpers/classNames/classNames";
 import { MainPageAsync } from "./pages/MainPage/MainPage.async";
 import { AboutPageAsync } from "./pages/AboutPage/AboutPage.async";
 
@@ -13,7 +13,7 @@ const App: React.FC = () => {
   const {theme, toggleTheme} = useTheme();
 
   return (
-    <div className={classNames("app", theme)}>
+    <div className={classNames("app", {}, [theme])}>
       <div style={{ display: "flex", gap: "0.2em" }}>
         <button onClick={toggleTheme}>
           {theme}
