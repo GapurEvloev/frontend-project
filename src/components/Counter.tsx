@@ -9,8 +9,10 @@ export const Counter: React.FC = () => {
   };
 
   return (
-    <div >
-      <button className={classes.btn} onClick={increment}>increment {count}</button>
+    <div>
+      <button className={classes.btn} onClick={increment}>
+        increment {count}
+      </button>
     </div>
   );
 };
