@@ -6,12 +6,11 @@ import "./styles/index.scss";
 import { Navbar } from "widgets/Navbar";
 
 const App: React.FC = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <div className={classNames("app", {}, [theme])}>
       <Navbar />
-      <button onClick={toggleTheme}>{theme}</button>
       <AppRouter />
     </div>
   );
