@@ -4,6 +4,7 @@ import { classNames } from "shared/lib/classNames/classNames";
 
 import "./styles/index.scss";
 import { Navbar } from "widgets/Navbar";
+import { Sidebar } from "widgets/Sidebar";
 
 const App: React.FC = () => {
   const { theme } = useTheme();
@@ -11,7 +12,10 @@ const App: React.FC = () => {
   return (
     <div className={classNames("app", {}, [theme])}>
       <Navbar />
-      <AppRouter />
+      <div className="page-wrapper">
+        <Sidebar/>
+        <AppRouter />
+      </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { Theme, useTheme } from "app/providers/ThemeProvider";
+import { useTheme } from "app/providers/ThemeProvider";
 import { classNames } from "shared/lib/classNames/classNames";
 import { Button, ThemeButton } from "shared/uiKit/Button/Button";
 import styles from "./ThemeSwitcher.module.scss";
@@ -8,14 +8,13 @@ interface ThemeSwitcherProps {
 }
 
 export const ThemeSwitcher = ({ classes }: ThemeSwitcherProps) => {
-  const { theme, toggleTheme } = useTheme();
-  const isDark = theme === Theme.DARK;
-  console.log("ThemeSwitcher", isDark);
+  const { toggleTheme } = useTheme();
+  
   return (
     <Button
       onClick={toggleTheme}
       theme={ThemeButton.CLEAR}
-      className={classNames(styles.themeSwitcher, {}, [styles[theme]])}
+      className={classNames(styles.themeSwitcher, {}, [])}
     >
       <span className={classNames(styles.switch, {}, [classes])}></span>
       <svg

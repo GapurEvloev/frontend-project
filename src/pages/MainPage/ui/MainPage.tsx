@@ -1,5 +1,5 @@
 const MainPage: React.FC = () => {
-  return <div>MAIN PAGE</div>;
+  return <>MAIN PAGE</>;
 };
 
 export default MainPage;
