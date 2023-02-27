@@ -1,9 +1,9 @@
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-
 import HTMLWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import webpack, { DefinePlugin } from "webpack";
 import { BuildOptions } from "./types/config";
+
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 export function buildPlugins({
   paths,

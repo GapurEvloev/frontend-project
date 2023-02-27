@@ -7,12 +7,12 @@ interface LangSwitcherProps {
   classes?: string;
 }
 
-export const LangSwitcher = ({classes}: LangSwitcherProps) => {
+export const LangSwitcher = ({ classes }: LangSwitcherProps) => {
   const { t, i18n } = useTranslation();
 
   const toggleLang = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en')
-  }
+    i18n.changeLanguage(i18n.language === "en" ? "ru" : "en");
+  };
 
   return (
     <div className={classNames(styles.langSwitcher, {}, [classes])}>

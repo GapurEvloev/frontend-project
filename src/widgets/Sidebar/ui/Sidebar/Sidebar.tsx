@@ -8,12 +8,12 @@ interface SidebarProps {
   classes?: string;
 }
 
-export const Sidebar = ({classes}: SidebarProps) => {
+export const Sidebar = ({ classes }: SidebarProps) => {
   const [collapsed, setCollapsed] = useState(false);
 
   const onToggle = () => {
-    setCollapsed(prev => !prev);
-  }
+    setCollapsed((prev) => !prev);
+  };
 
   return (
     <div
@@ -21,7 +21,7 @@ export const Sidebar = ({classes}: SidebarProps) => {
         classes,
       ])}
     >
-      <button onClick={onToggle}>toggle</button>
+      <button type="button" onClick={onToggle}>toggle</button>
       <div className={styles.switchers}>
         <ThemeSwitcher />
         {!collapsed && <LangSwitcher />}

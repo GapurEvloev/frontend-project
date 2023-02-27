@@ -9,14 +9,14 @@ interface ThemeSwitcherProps {
 
 export const ThemeSwitcher = ({ classes }: ThemeSwitcherProps) => {
   const { toggleTheme } = useTheme();
-  
+
   return (
     <Button
       onClick={toggleTheme}
       theme={ThemeButton.CLEAR}
       className={classNames(styles.themeSwitcher, {}, [])}
     >
-      <span className={classNames(styles.switch, {}, [classes])}></span>
+      <span className={classNames(styles.switch, {}, [classes])} />
       <svg
         className={classNames(styles.sun, {}, [classes])}
         width="24"
