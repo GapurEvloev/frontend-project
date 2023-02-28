@@ -12,7 +12,9 @@ i18n
     // lng: "en",
     fallbackLng: "en",
     debug: __IS_DEV__,
-
+    react: {
+      useSuspense: false, //   <---- this will do the magic
+    },
     interpolation: {
       escapeValue: false,
     },

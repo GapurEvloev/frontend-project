@@ -1,5 +1,14 @@
 {
   "About": "О сайте",
   "Lang": "Ru",
-  "MAIN PAGE": "MAIN PAGE"
+  "Loading": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "MAIN PAGE": "MAIN PAGE",
+  "Main": "Main",
+  "toggle": "toggle"
 }
