@@ -1,4 +1,5 @@
 {
+  "\"MAIN PAGE\"": "\"MAIN PAGE\"",
   "About": "About",
   "Lang": "De",
   "Loading": {
@@ -8,8 +9,10 @@
       }
     }
   },
+  "MAIN PAG1E": "MAIN PAG1E",
   "MAIN PAGE": "MAIN PAGE",
   "Main": "Main",
   "Page not found": "Page not found",
+  "main_page": "main_page",
   "toggle": "toggle"
 }
