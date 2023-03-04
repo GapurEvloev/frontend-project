@@ -38,7 +38,7 @@ module.exports = {
       "error",
       { markupOnly: true, ignoreAttribute: ["to"] },
     ],
-    "max-len": ["error", { ignoreComments: true }],
+    "max-len": ["error", { ignoreComments: true, code: 120 }],
   },
   globals: {
     React: true,
