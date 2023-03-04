@@ -3,7 +3,9 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import webpack, { DefinePlugin } from "webpack";
 import { BuildOptions } from "./types/config";
 
-const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const ReactRefreshWebpackPlugin = require(
+  "@pmmmwh/react-refresh-webpack-plugin",
+);
 
 export function buildPlugins({
   paths,
@@ -20,6 +22,6 @@ export function buildPlugins({
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
-    ...(isDev ? [new ReactRefreshWebpackPlugin()] : []),
+    ...(isDev ? [new ReactRefreshWebpackPlugin({ overlay: false })] : []),
   ];
 }
