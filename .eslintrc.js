@@ -4,7 +4,12 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-  extends: ["plugin:react/recommended", "airbnb", "plugin:i18next/recommended"],
+  extends: [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:i18next/recommended",
+    "plugin:storybook/recommended",
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -21,7 +26,9 @@ module.exports = {
     indent: [2, 2],
     "react/jsx-filename-extension": [
       2,
-      { extensions: [".js", ".jsx", ".tsx"] },
+      {
+        extensions: [".js", ".jsx", ".tsx"],
+      },
     ],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
@@ -36,9 +43,18 @@ module.exports = {
     "no-underscore-dangle": "off",
     "i18next/no-literal-string": [
       "error",
-      { markupOnly: true, ignoreAttribute: ["to", "data-testid"] },
+      {
+        markupOnly: true,
+        ignoreAttribute: ["to", "data-testid"],
+      },
     ],
-    "max-len": ["error", { ignoreComments: true, code: 120 }],
+    "max-len": [
+      "error",
+      {
+        ignoreComments: true,
+        code: 120,
+      },
+    ],
   },
   globals: {
     React: true,
