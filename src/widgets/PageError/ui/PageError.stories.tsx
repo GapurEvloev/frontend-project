@@ -2,17 +2,17 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 import React from "react";
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Navbar } from "./Navbar";
+import { PageError } from "./PageError";
 
 export default {
-  title: "widgets/Navbar",
-  component: Navbar,
+  title: "widgets/PageError",
+  component: PageError,
   argTypes: {
     backgroundColor: { control: "color" },
   },
-} as ComponentMeta<typeof Navbar>;
+} as ComponentMeta<typeof PageError>;
 
-const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
+const Template: ComponentStory<typeof PageError> = (args) => <PageError {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};
