@@ -16,6 +16,8 @@
     "allowJs": true,
     // moduleResolution - how to resolve modules (files). There are two options: classic and node.
     "moduleResolution": "node",
+    // baseUrl - the base path for all imports
+    "baseUrl": "./",
     // esModuleInterop allows you to work with packages that use
     // common js as with regular packages using import (require() module.export) = common js
     // import Moment from 'moment';
