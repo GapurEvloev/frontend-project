@@ -1,11 +1,12 @@
 import webpack from "webpack";
+import { buildDevServer } from "./buildDevServer";
 import { buildLoaders } from "./buildLoaders";
 import { buildPlugins } from "./buildPlugins";
 import { buildResolvers } from "./buildResolvers";
 import { BuildOptions } from "./types/config";
 
 export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
-  const { mode, paths } = options;
+  const { mode, paths, isDev } = options;
 
   return {
     mode: mode, // Set the mode to development or production
@@ -17,10 +18,12 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
       path: paths.build, // Output directory
       clean: true, // Clean the output directory before emit.
     },
-    plugins: buildPlugins(options),
+    plugins: buildPlugins(options), // List of plugins
     module: {
-      rules: buildLoaders(),
+      rules: buildLoaders(), // Loaders
     },
-    resolve: buildResolvers(),
+    resolve: buildResolvers(), // Resolve file extensions
+    devtool: isDev ? "inline-source-map" : undefined, // Emit a source map for easier debugging
+    devServer: isDev ? buildDevServer(options) : undefined, // Dev server configuration
   }
 }
