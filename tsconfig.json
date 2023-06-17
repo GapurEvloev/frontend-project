@@ -11,7 +11,7 @@
     // In which specification we compile: to support most browsers
     "target": "es5",
     // jsx - allows you to use jsx syntax
-    "jsx": "react",
+    "jsx": "react-jsx",
     // The compiler will process not only TS files, but also JS files
     "allowJs": true,
     // moduleResolution - how to resolve modules (files). There are two options: classic and node.
