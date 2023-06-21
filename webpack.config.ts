@@ -8,6 +8,7 @@ export default (env: BuildEnv): webpack.Configuration => {
     entry: path.resolve(__dirname, "src", "index.tsx"), // Entry file
     build: path.resolve(__dirname, "build"), // Output directory
     htmlTemplate: path.resolve(__dirname, "public", "index.html"), // Template file
+    src: path.resolve(__dirname, "src"), // Source directory
   }
   const mode = env.mode || 'development'; // Set the mode to development or production (default is development)
   const PORT = env.port || 3000; // The port the dev server will run on (default is 3000)
