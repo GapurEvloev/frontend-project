@@ -10,6 +10,22 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
     exclude: /node_modules/, // Don't apply to files residing in node_modules
   };
 
+  // SVG-loader
+  const svgLoader: webpack.RuleSetRule = {
+    test: /\.svg$/,
+    use: ["@svgr/webpack"],
+  }
+
+  // File-loader
+  const fileLoader: webpack.RuleSetRule = {
+    test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+    use: [
+      {
+        loader: "file-loader",
+      },
+    ],
+  };
+
   // Rule for sass-loader (compile sass to css)
   const sassLoader: webpack.RuleSetRule = {
     test: /\.s[ac]ss$/i,
@@ -29,6 +45,8 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
   }
 
   return [ // List of rules for modules (configure loaders, parser options, etc.). These rules only apply for modules bundling with webpack and only for this config file.
+    fileLoader,
+    svgLoader,
     tsLoader,
     sassLoader,
   ];
