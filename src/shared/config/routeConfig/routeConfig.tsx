@@ -12,13 +12,13 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.ABOUT]: "/about",
 }
 
-export const routesCounfig: Array<RouteProps> = [
+export const routesConfig: Array<RouteProps> = [
   {
-    path: AppRoutes.MAIN,
+    path: RoutePath.main,
     element: <MainPage />
   },
   {
-    path: AppRoutes.ABOUT,
+    path: RoutePath.about,
     element: <AboutPage />
   }
 ]
