@@ -1,6 +1,5 @@
 {
-  "test translation": "test translation",
-  "translate-btn": "English",
-  "main-nav": "Main",
-  "about-nav": "About"
+  "nav-about": "About",
+  "nav-main": "Main",
+  "translate-btn": "English"
 }

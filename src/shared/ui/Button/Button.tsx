@@ -19,7 +19,6 @@ export const Button: FC<ButtonProps> = (props) => {
     ...restProps
   } = props;
 
-  console.log({classes})
   return (
     <button
       {...restProps}

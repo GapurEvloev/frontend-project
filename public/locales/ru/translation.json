@@ -1,6 +1,5 @@
 {
-  "test translation": "тестовый перевод",
-  "translate-btn": "Русский",
-  "main-nav": "Главная",
-  "about-nav": "О нас"
+  "nav-about": "О нас",
+  "nav-main": "Главная",
+  "translate-btn": "Русский"
 }

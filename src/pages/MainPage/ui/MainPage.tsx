@@ -6,7 +6,7 @@ const MainPage: React.FC = () => {
 
   return (
     <div>
-      <h1>{t("main-title")}</h1>
+      <h1>{t("main:main-title")}</h1>
     </div>
   );
 };

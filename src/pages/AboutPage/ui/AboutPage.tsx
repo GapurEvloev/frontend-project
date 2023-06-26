@@ -6,7 +6,8 @@ const AboutPage: React.FC = () => {
 
   return (
     <div>
-      <h1>{t("about-title")}</h1>
+      <h1>{t("about:about-title")}</h1>
+      <p>{t("about:about-subtitle")}</p>
     </div>
   );
 };
