@@ -1,10 +1,11 @@
+import ReactRefreshPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import webpack from "webpack";
 import { BuildOptions } from "./types/config";
 
 export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPluginInstance[] {
-  return [ // List of plugins
+  const plugins = [ // List of plugins
     new HtmlWebpackPlugin({ // Generates an HTML file from a template
       template: paths.htmlTemplate, // Template file
     }),
@@ -15,6 +16,14 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
     }),
     new webpack.DefinePlugin({ // Allows you to create global constants which can be configured at compile time
       __IS_DEV__: JSON.stringify(isDev), // isDev constant
-    })
+    }),
+
   ];
+
+  if (isDev) {
+    plugins.push(new ReactRefreshPlugin()); // React refresh plugin
+    plugins.push(new webpack.HotModuleReplacementPlugin()) // Hot module replacement plugin (HMR)
+  }
+
+  return plugins;
 }
