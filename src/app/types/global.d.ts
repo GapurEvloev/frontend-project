@@ -1,4 +1,4 @@
-declare module "*.scss" {
+declare module "*.scss" { // for css modules support in typescript files
   interface IClassNames {
     [className: string]: string;
   }
@@ -15,3 +15,6 @@ declare module "*.svg" {
   const SVG: React.VFC<React.SVGProps<SVGElement>>;
   export default SVG;
 }
+
+// global constants
+declare const __IS_DEV__: boolean; // isDev constant from webpack.DefinePlugin
