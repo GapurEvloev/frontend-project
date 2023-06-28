@@ -7,7 +7,7 @@ export function classNames(cls: string, mods: Mods = {}, additional: string[] = 
       .map(([className]) => className)
     : [];
 
-  return [cls, ...additional.filter(Boolean), ...modifierClassNames].join(" ");
+  return [cls, ...additional.filter(Boolean), ...modifierClassNames].join(' ');
 }
 
-classNames("button", {hovered: true, active: true, disabled: false}, ["button--red", "button--big"]);
+classNames('button', { hovered: true, active: true, disabled: false }, ['button--red', 'button--big']);
