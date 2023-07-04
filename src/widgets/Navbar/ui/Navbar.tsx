@@ -1,3 +1,4 @@
+import { BugButton } from 'app/providers/ErrorBoundary';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -16,6 +17,7 @@ export const Navbar = ({ classes }: NavbarProps) => {
       <div className={styles.links}>
         <AppLink theme={AppLinkTheme.SECONDARY} to="/">{t('nav-main')}</AppLink>
         <AppLink theme={AppLinkTheme.SECONDARY} to="/about">{t('nav-about')}</AppLink>
+        <BugButton />
       </div>
     </div>
   );

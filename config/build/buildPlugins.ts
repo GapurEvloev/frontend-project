@@ -22,7 +22,9 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
   ];
 
   if (isDev) {
-    plugins.push(new ReactRefreshPlugin()); // React refresh plugin
+    plugins.push(new ReactRefreshPlugin({
+      overlay: false, // Disable overlay
+    })); // React refresh plugin
     plugins.push(new webpack.HotModuleReplacementPlugin()); // Hot module replacement plugin (HMR)
   }
 

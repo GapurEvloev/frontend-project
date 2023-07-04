@@ -1,4 +1,9 @@
 {
+  "Something went wrong": {
+    "": "Something went wrong."
+  },
+  "Throw error": "Throw error",
+  "Try again": "Try again",
   "main-title": "main-title",
   "nav-about": "About",
   "nav-main": "Main",

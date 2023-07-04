@@ -1,4 +1,9 @@
 {
+  "Something went wrong": {
+    "": "Что-то пошло не так."
+  },
+  "Throw error": "Throw error",
+  "Try again": "Try again",
   "main-title": "main-title",
   "nav-about": "О нас",
   "nav-main": "Главная",
