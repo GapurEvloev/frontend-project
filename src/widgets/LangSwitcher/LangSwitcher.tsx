@@ -10,7 +10,7 @@ interface LangSwitcherProps {
 export const LangSwitcher = ({ classes }: LangSwitcherProps) => {
   const { t, i18n } = useTranslation();
 
-  const toggleLanguage = () => {
+  const toggleLanguage = async () => {
     i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en');
   };
 

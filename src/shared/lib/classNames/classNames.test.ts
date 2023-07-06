@@ -1,4 +1,4 @@
-import { classNames } from './classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 
 describe('classNames', () => {
   test('with only first param', () => {
@@ -6,7 +6,8 @@ describe('classNames', () => {
   });
 
   test('with additional params', () => {
-    expect(classNames('someClass', {}, ['additionalClass1', 'additionalClass2'])).toBe('someClass additionalClass1 additionalClass2');
+    expect(classNames('someClass', {}, ['additionalClass1', 'additionalClass2']))
+      .toBe('someClass additionalClass1 additionalClass2');
   });
 
   test('with mods', () => {
@@ -22,6 +23,10 @@ describe('classNames', () => {
   });
 
   test('with additional and mod', () => {
-    expect(classNames('someClass', { hovered: true, scrollable: undefined }, ['additionalClass1', 'additionalClass2'])).toBe('someClass additionalClass1 additionalClass2 hovered');
+    expect(classNames(
+      'someClass',
+      { hovered: true, scrollable: undefined },
+      ['additionalClass1', 'additionalClass2'],
+    )).toBe('someClass additionalClass1 additionalClass2 hovered');
   });
 });
