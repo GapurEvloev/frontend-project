@@ -43,7 +43,7 @@ module.exports = {
       {
         markupOnly: true,
         onlyAttribute: ['t', 'i18nKey'],
-        ignoreAttribute: ['data-testid'],
+        ignoreAttribute: ['data-testid', 'to'],
       },
     ],
     'max-len': ['error', { code: 120, ignoreComments: true }],
