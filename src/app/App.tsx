@@ -10,6 +10,8 @@ import './styles/index.scss';
 function App() {
   const { theme } = useTheme();
 
+  console.log('theme', theme);
+
   return (
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="">
