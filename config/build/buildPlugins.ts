@@ -19,9 +19,6 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev), // isDev constant
     }),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false, // Disable open analyzer
-    }), // Bundle analyzer plugin
   ];
 
   if (isDev) {
@@ -29,6 +26,11 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
       overlay: false, // Disable overlay
     })); // React refresh plugin
     plugins.push(new webpack.HotModuleReplacementPlugin()); // Hot module replacement plugin (HMR)
+    plugins.push(
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false, // Disable open analyzer
+      }), // Bundle analyzer plugin
+    );
   }
 
   return plugins;
