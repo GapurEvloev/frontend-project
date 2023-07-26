@@ -3,6 +3,7 @@ package-lock.json
 /dist
 /build
 /storybook-static
+.loki/report.*
 
 # misc
 .DS_Store
