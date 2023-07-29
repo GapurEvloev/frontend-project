@@ -15,7 +15,7 @@ export const ThemeSwitcher = ({ classes }: ThemeSwitcherProps) => {
 
   return (
     <Button
-      theme={ButtonTheme.CLEAR}
+      theme={ButtonTheme.CLEAR_INVERTED}
       classes={classNames('btn', {}, [classes])}
       onClick={toggleTheme}
     >

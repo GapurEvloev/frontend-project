@@ -1,5 +1,5 @@
 import React, {
-  FC, useState, useMemo, ReactNode,
+  FC, useState, useMemo, ReactNode, useCallback,
 } from 'react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeContext } from '../lib/ThemeContext';
@@ -12,9 +12,9 @@ interface ThemeSBProviderProps {
 export const ThemeSBProvider: FC<ThemeSBProviderProps> = ({ children, initialTheme }) => {
   const [theme, setTheme] = useState(initialTheme);
 
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     setTheme(theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
-  };
+  }, [theme]);
 
   const contextValue = useMemo(() => ({
     theme,

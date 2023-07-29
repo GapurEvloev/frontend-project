@@ -1,5 +1,6 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { Portal } from 'shared/ui/Portal/Portal';
 import styles from './Modal.module.scss';
 
 interface ModalProps {
@@ -9,19 +10,14 @@ interface ModalProps {
   onClose?: () => void;
 }
 
-const ANIMATION_DELAY = 200;
-
 export const Modal = ({
   classes,
   children,
   isOpen,
   onClose,
 }: ModalProps) => {
-  const [isClosing, setIsClosing] = useState(false);
-  const timerRef = React.useRef<number>();
   const mods: Record<string, boolean> = {
     [styles.opened]: isOpen,
-    [styles.closing]: isClosing,
   };
 
   const onContentClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -30,11 +26,7 @@ export const Modal = ({
 
   const closeHandler = useCallback(() => {
     if (onClose) {
-      setIsClosing(true);
-      timerRef.current = window.setTimeout(() => {
-        onClose();
-        setIsClosing(false);
-      }, ANIMATION_DELAY);
+      onClose();
     }
   }, [onClose]);
 
@@ -50,22 +42,21 @@ export const Modal = ({
     }
 
     return () => {
-      if (timerRef.current) {
-        window.clearTimeout(timerRef.current);
-        window.removeEventListener('keydown', onKeyDown);
-      }
+      window.removeEventListener('keydown', onKeyDown);
     };
   }, [isOpen, onKeyDown]);
 
   return (
-    <div className={classNames(styles.modal, mods, [classes])}>
-      <div className={styles.overlay} onClick={closeHandler}>
-        <div className={styles.content} onClick={onContentClick}>
-          {
-            children
-          }
+    <Portal>
+      <div className={classNames(styles.modal, mods, [classes])}>
+        <div className={styles.overlay} onClick={closeHandler}>
+          <div className={styles.content} onClick={onContentClick}>
+            {
+              children
+            }
+          </div>
         </div>
       </div>
-    </div>
+    </Portal>
   );
 };

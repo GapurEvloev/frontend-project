@@ -1,13 +1,14 @@
 {
+  "LogIn": "LogIn",
   "Something went wrong": {
     "": ""
   },
   "Throw error": "",
   "Try again": "",
+  "modal-content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolores ea nemo officiis perspiciatis! Ad, consequatur, nemo. Ab asperiores dolore error illo, magni, nemo, neque numquam pariatur placeat quam velit voluptatem voluptatum! Alias corporis nemo non numquam odit perferendis totam!",
   "nav-about": "",
   "nav-main": "",
   "toggle": "",
   "translate-btn": "En",
-  "translate-btn-short": "En",
-  "Modal content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolores ea nemo officiis perspiciatis! Ad, consequatur, nemo. Ab asperiores dolore error illo, magni, nemo, neque numquam pariatur placeat quam velit voluptatem voluptatum! Alias corporis nemo non numquam odit perferendis totam!"
+  "translate-btn-short": "En"
 }
