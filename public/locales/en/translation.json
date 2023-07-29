@@ -1,14 +1,11 @@
 {
   "LogIn": "LogIn",
-  "Modal": "Modal",
-  "Modal content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolores ea nemo officiis perspiciatis! Ad, consequatur, nemo. Ab asperiores dolore error illo, magni, nemo, neque numquam pariatur placeat quam velit voluptatem voluptatum! Alias corporis nemo non numquam odit perferendis totam!",
   "Something went wrong": {
     "": "Something went wrong."
   },
   "Throw error": "Throw error",
   "Try again": "Try again",
   "main-title": "main-title",
-  "modal-button": "modal-button",
   "modal-content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolores ea nemo officiis perspiciatis! Ad, consequatur, nemo. Ab asperiores dolore error illo, magni, nemo, neque numquam pariatur placeat quam velit voluptatem voluptatum! Alias corporis nemo non numquam odit perferendis totam!",
   "nav-about": "About",
   "nav-main": "Main",
