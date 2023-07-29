@@ -47,16 +47,14 @@ export const Modal = ({
   }, [isOpen, onKeyDown]);
 
   return (
-    <Portal>
-      <div className={classNames(styles.modal, mods, [classes])}>
-        <div className={styles.overlay} onClick={closeHandler}>
-          <div className={styles.content} onClick={onContentClick}>
-            {
-              children
-            }
-          </div>
+    <div className={classNames(styles.modal, mods, [classes])}>
+      <div className={styles.overlay} onClick={closeHandler}>
+        <div className={styles.content} onClick={onContentClick}>
+          {
+            children
+          }
         </div>
       </div>
-    </Portal>
+    </div>
   );
 };
