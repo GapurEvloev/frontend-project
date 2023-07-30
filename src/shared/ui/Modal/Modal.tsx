@@ -8,6 +8,7 @@ interface ModalProps {
   children?: React.ReactNode;
   isOpen?: boolean;
   onClose?: () => void;
+  element?: HTMLElement;
 }
 
 export const Modal = ({
@@ -15,6 +16,7 @@ export const Modal = ({
   children,
   isOpen,
   onClose,
+  element,
 }: ModalProps) => {
   const mods: Record<string, boolean> = {
     [styles.opened]: isOpen,
@@ -47,7 +49,7 @@ export const Modal = ({
   }, [isOpen, onKeyDown]);
 
   return (
-    <Portal element={document.getElementById('#root')}>
+    <Portal element={element || document.getElementById('#root')}>
       <div className={classNames(styles.modal, mods, [classes])}>
         <div className={styles.overlay} onClick={closeHandler}>
           <div className={styles.content} onClick={onContentClick}>
