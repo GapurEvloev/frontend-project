@@ -101,7 +101,6 @@ export default {
   moduleNameMapper: {
     '\\.(css|scss|sass)$': 'identity-obj-proxy',
     '\\.svg$': path.resolve(__dirname, '../../src/__mocks__/jestMockSvg.tsx'),
-    'entities/(.*)': '<rootDir>/src/entities/$1',
   },
 
   // An array of regexp pattern strings,
