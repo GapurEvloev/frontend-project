@@ -12,6 +12,9 @@ export default {
   // Stop running tests after `n` failures
   // bail: 0,
 
+  // The root directory that Jest should scan for tests and modules within
+  rootDir: '../../',
+
   // The directory where Jest should store its cached dependency information
   // cacheDirectory: "/private/var/folders/sk/_bkr41t132ng7z4lzlvckmnm0000gn/T/jest_dx",
 
@@ -98,6 +101,7 @@ export default {
   moduleNameMapper: {
     '\\.(css|scss|sass)$': 'identity-obj-proxy',
     '\\.svg$': path.resolve(__dirname, '../../src/__mocks__/jestMockSvg.tsx'),
+    'entities/(.*)': '<rootDir>/src/entities/$1',
   },
 
   // An array of regexp pattern strings,
@@ -130,9 +134,6 @@ export default {
 
   // Automatically restore mock state and implementation before every test
   // restoreMocks: false,
-
-  // The root directory that Jest should scan for tests and modules within
-  rootDir: '../../',
 
   // A list of paths to directories that Jest should use to search for files in
   // roots: [

@@ -12,5 +12,7 @@
   "nav-about": "О нас",
   "nav-main": "Главная",
   "translate-btn": "Русский",
-  "translate-btn-short": "Ру"
+  "translate-btn-short": "Ру",
+  "increment": "increment",
+  "decrement": "decrement"
 }
