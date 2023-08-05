@@ -9,4 +9,4 @@ interface PortalProps {
 export const Portal = ({
   children,
   element,
-}: PortalProps) => createPortal(children, element || document.body);
+}: PortalProps) => createPortal(children, element || document.getElementById('root'));
