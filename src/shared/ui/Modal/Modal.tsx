@@ -9,7 +9,6 @@ interface ModalProps {
   children?: React.ReactNode;
   isOpen?: boolean;
   onClose?: () => void;
-  element?: HTMLElement;
 }
 
 export const Modal = ({
@@ -17,7 +16,6 @@ export const Modal = ({
   children,
   isOpen,
   onClose,
-  element,
 }: ModalProps) => {
   const { theme } = useTheme();
   const mods: Record<string, boolean> = {
@@ -51,7 +49,7 @@ export const Modal = ({
   }, [isOpen, onKeyDown]);
 
   return (
-    <Portal element={element}>
+    <Portal>
       <div className={classNames(styles.modal, mods, [classes, theme])}>
         <div className={styles.overlay} onClick={closeHandler}>
           <div className={styles.content} onClick={onContentClick}>
