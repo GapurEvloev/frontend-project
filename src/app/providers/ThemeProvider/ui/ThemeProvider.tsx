@@ -17,7 +17,7 @@ const ThemeProvider: FC = ({ children }) => {
     return () => {
       document.body.classList.remove(theme);
     };
-  }, []);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={defaultProps}>
