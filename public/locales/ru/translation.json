@@ -1,5 +1,8 @@
 {
+  "Enter password": "Enter password",
+  "Enter username": "Enter username",
   "LogIn": "LogIn",
+  "Login": "Login",
   "Something went wrong": {
     "": "Что-то пошло не так."
   },
@@ -8,9 +11,10 @@
   "decrement": "decrement",
   "increment": "increment",
   "main-title": "main-title",
-  "modal-content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolores ea nemo officiis perspiciatis! Ad, consequatur, nemo. Ab asperiores dolore error illo, magni, nemo, neque numquam pariatur placeat quam velit voluptatem voluptatum! Alias corporis nemo non numquam odit perferendis totam!",
   "nav-about": "О нас",
   "nav-main": "Главная",
+  "password": "password",
   "translate-btn": "Русский",
-  "translate-btn-short": "Ру"
+  "translate-btn-short": "Ру",
+  "username": "username"
 }

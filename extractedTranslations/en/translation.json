@@ -1,5 +1,8 @@
 {
+  "Enter password": "Enter password",
+  "Enter username": "Enter username",
   "LogIn": "LogIn",
+  "Login": "",
   "Something went wrong": {
     "": ""
   },
