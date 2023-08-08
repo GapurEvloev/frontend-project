@@ -1,8 +1,12 @@
 {
-  "Enter password": "Enter password",
-  "Enter username": "Enter username",
-  "LogIn": "LogIn",
-  "Login": "Login",
+  "Auth Form": "Форма авторизации",
+  "Enter password": "Введите пароль",
+  "Enter username": "Введите имя",
+  "Incorrect username or password": "Incorrect username or password",
+  "Invalid username or password": "Неверное имя пользователя или пароль",
+  "Log in": "Log in",
+  "Log out": "Log out",
+  "Login": "Войти",
   "Something went wrong": {
     "": "Что-то пошло не так."
   },

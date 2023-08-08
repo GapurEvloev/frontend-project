@@ -1,10 +1,17 @@
 {
+  "Auth Form": "Auth Form",
   "Enter password": "Enter password",
   "Enter username": "Enter username",
+  "Incorrect username or password": "",
+  "Invalid username or password": "Invalid username or password",
+  "Log in": "Log in",
+  "Log out": "Log out",
   "LogIn": "LogIn",
-  "Login": "",
+  "LogOut": "LogOut",
+  "Login": "Login",
+  "Login by username": "Login by username",
   "Something went wrong": {
-    "": ""
+    "": "Something went wrong"
   },
   "Throw error": "",
   "Try again": "",

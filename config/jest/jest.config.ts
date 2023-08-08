@@ -101,6 +101,7 @@ export default {
   moduleNameMapper: {
     '\\.(css|scss|sass)$': 'identity-obj-proxy',
     '\\.svg$': path.resolve(__dirname, '../../src/__mocks__/jestMockSvg.tsx'),
+    axios: 'axios/dist/node/axios.cjs',
   },
 
   // An array of regexp pattern strings,
